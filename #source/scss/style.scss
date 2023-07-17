@@ -212,7 +212,7 @@ img{
 .brunch__column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     padding-top: 180px;
     padding-left: 0px;
     @media (max-width: 1401px) {
@@ -248,8 +248,8 @@ img{
 }
 .brunch__image {
     display: flex;
+    justify-content: space-between;
     gap: 25px;
-    overflow: hidden;
     padding: 0px 0px 0px 60px;
     margin-top: 80px;
     margin-bottom: 80px;
