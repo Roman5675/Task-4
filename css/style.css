@@ -422,10 +422,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 40px;
   width: 477.5px;
   height: 71px;
   border-radius: 35.5px;
@@ -451,7 +451,6 @@ img {
 }
 @media (max-width: 800px) {
   .brunch__seemore {
-    gap: 0px;
     padding-left: calc(66.22px + 26.78 * (100vw - 400px) / 400);
     padding-right: calc(45.47px + 18.38 * (100vw - 400px) / 400);
   }
@@ -468,8 +467,7 @@ img {
 }
 @media (max-width: 399px) {
   .brunch__seemore {
-    width: auto;
-    gap: 0px;
+    gap: 10px;
     padding-left: calc(30px + 36.22 * (100vw - 300px) / 99);
     padding-right: calc(22px + 23.47 * (100vw - 300px) / 99);
   }
