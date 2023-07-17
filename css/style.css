@@ -409,6 +409,11 @@ img {
     padding-left: 0px;
   }
 }
+@media (max-width: 538px) {
+  .brunch__image-left-second-row {
+    width: 100%;
+  }
+}
 
 .brunch__seemore {
   display: -webkit-box;
@@ -465,8 +470,8 @@ img {
   .brunch__seemore {
     width: auto;
     gap: 0px;
-    padding-left: calc(30px + 36.22 * (100vw - 399px) / 99);
-    padding-right: calc(22px + 23.47 * (100vw - 399px) / 99);
+    padding-left: calc(30px + 36.22 * (100vw - 300px) / 99);
+    padding-right: calc(22px + 23.47 * (100vw - 300px) / 99);
   }
 }
 

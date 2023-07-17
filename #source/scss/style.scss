@@ -277,9 +277,13 @@ img{
 }
 
 .brunch__image-left-second-row {
+
     padding-left: 60px;
     @media (max-width: 1401px) {
     padding-left: 0px;
+    }
+    @media (max-width: 538px) {
+        width: 100%;
     }
 }
 
@@ -319,11 +323,10 @@ img{
         margin-bottom: 10px;
     }
     @media (max-width: 399px) {
-        
         width: auto;
         gap: 0px;
-        padding-left: calc(30px + (66.22 - 30) * ((100vw - 399px) / (399 - 300)));
-        padding-right: calc(22px + (45.47 - 22) * ((100vw - 399px) / (399 - 300)));
+        padding-left: calc(30px + (66.22 - 30) * ((100vw - 300px) / (399 - 300)));
+        padding-right: calc(22px + (45.47 - 22) * ((100vw - 300px) / (399 - 300)));
     }
 }
 
