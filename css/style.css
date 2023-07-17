@@ -1,0 +1,579 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@font-face {
+  font-family: "Actonia Hand PERSONAL USE";
+  src: url("../fonts/ActoniaHand_PERSONAL.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: normal;
+  font-size: 24px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", "Actonia Hand PERSONAL USE";
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(255, 255, 254, 0.5);
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.brunch._lock {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding-top: 34px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+@media (max-width: 800px) {
+  .header {
+    padding-left: calc(30px + 30 * (100vw - 400px) / 400);
+    padding-right: calc(30px + 30 * (100vw - 400px) / 400);
+  }
+}
+
+.header__fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: rgb(255, 255, 254);
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+
+.header__menu .menu__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+@media (max-width: 893px) {
+  .header__menu .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0px 0px 0px 0px;
+    gap: 25px;
+  }
+}
+
+.menu__link {
+  color: #020826;
+  font-family: "Actonia Hand PERSONAL USE";
+  font-style: normal;
+}
+
+.menu__icon {
+  display: none;
+}
+
+.menu__line-bottom {
+  width: auto;
+  height: 1px;
+  background-color: #CDAA35;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 893px) {
+  .header__logo {
+    z-index: 5;
+  }
+  .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .menu__icon._active span {
+    -webkit-transform: scale(0) translate(0px, -50%);
+            transform: scale(0) translate(0px, -50%);
+  }
+  .menu__icon._active::before {
+    top: 50%;
+    -webkit-transform: rotate(135deg) translate(0px, 0);
+            transform: rotate(135deg) translate(0px, 0);
+  }
+  .menu__icon._active::after {
+    top: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 0);
+            transform: rotate(45deg) translate(0px, 0);
+  }
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background: #020826;
+  }
+  .menu__icon::before,
+  .menu__icon::after {
+    content: "";
+  }
+  .menu__icon::before {
+    top: 0px;
+  }
+  .menu__icon::after {
+    bottom: 0px;
+  }
+  .menu__icon span {
+    top: 50%;
+    -webkit-transform: scale(1) translate(0px, -50%);
+            transform: scale(1) translate(0px, -50%);
+  }
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 500px;
+    background: #FFF;
+    padding: 120px 30px 0px 30px;
+    -webkit-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 90px;
+    background-color: #FFF;
+    z-index: 2;
+  }
+  .menu__body._active::before {
+    border-bottom: 1px solid #e0dbdb;
+  }
+  .menu__body._active {
+    left: 0;
+    z-index: 4;
+  }
+}
+.brunch__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 180px;
+  padding-left: 0px;
+}
+@media (max-width: 1401px) {
+  .brunch__column {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .brunch__column {
+    padding-top: calc(150px + 30 * (100vw - 400px) / 400);
+  }
+}
+
+.brunch__title {
+  color: #CDAA35;
+  text-align: center;
+  font-family: "Actonia Hand PERSONAL USE";
+  font-size: 90px;
+  letter-spacing: 2.7px;
+  margin-bottom: 79px;
+  line-height: 1;
+}
+@media (max-width: 800px) {
+  .brunch__title {
+    margin-bottom: calc(40px + 39 * (100vw - 400px) / 400);
+  }
+}
+
+.brunch__subtitle {
+  text-align: center;
+  font-family: "Montserrat";
+}
+.brunch__subtitle p:first-child {
+  padding-bottom: 10px;
+}
+@media (max-width: 400px) {
+  .brunch__subtitle {
+    font-size: 20px;
+    padding-bottom: 14px;
+  }
+}
+
+.brunch__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  overflow: hidden;
+  padding: 0px 0px 0px 60px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (max-width: 1401px) {
+  .brunch__image {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px 0px 0px 0px;
+  }
+}
+@media (max-width: 800px) {
+  .brunch__image {
+    margin-top: calc(40px + 40 * (100vw - 400px) / 400);
+    margin-bottom: calc(40px + 40 * (100vw - 400px) / 400);
+  }
+}
+@media (max-width: 400px) {
+  .brunch__image {
+    margin-bottom: 70px;
+  }
+}
+
+.brunch__image-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+}
+@media (max-width: 1401px) {
+  .brunch__image-left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.brunch__image-left-second-row {
+  padding-left: 60px;
+}
+@media (max-width: 1401px) {
+  .brunch__image-left-second-row {
+    padding-left: 0px;
+  }
+}
+
+.brunch__seemore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+  width: 477.5px;
+  height: 71px;
+  border-radius: 35.5px;
+  background: #FFFFFE;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 0px 63.85px 0px 93px;
+  padding-left: 93px;
+  padding-right: 63.85px;
+}
+.brunch__seemore p {
+  font-family: "Actonia Hand PERSONAL USE";
+  color: #020826;
+  font-size: 32px;
+}
+.brunch__seemore img {
+  width: 90.225px;
+}
+@media (max-width: 800px) {
+  .brunch__seemore img {
+    width: calc(64px + 26.225 * (100vw - 400px) / 400);
+  }
+}
+@media (max-width: 800px) {
+  .brunch__seemore {
+    gap: 0px;
+    padding-left: calc(66.22px + 26.78 * (100vw - 400px) / 400);
+    padding-right: calc(45.47px + 18.38 * (100vw - 400px) / 400);
+  }
+}
+@media (max-width: 538px) {
+  .brunch__seemore {
+    width: auto;
+  }
+}
+@media (max-width: 400px) {
+  .brunch__seemore {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 399px) {
+  .brunch__seemore {
+    width: auto;
+    gap: 0px;
+    padding-left: calc(30px + 36.22 * (100vw - 399px) / 99);
+    padding-right: calc(22px + 23.47 * (100vw - 399px) / 99);
+  }
+}
+
+.brunch__image-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+@media (max-width: 400px) {
+  .brunch__image-right {
+    display: none;
+  }
+}
+
+.brunch__image-right-first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  .brunch__image-right-first-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.brunch__image-right-second-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+@media (max-width: 800px) {
+  .brunch__image-right-second-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.brunch__line {
+  width: auto;
+  height: 1px;
+  background-color: #CDAA35;
+  margin: 0px 100px 90px 100px;
+}
+@media (max-width: 1401px) {
+  .brunch__line {
+    margin: 0px 70px 90px 70px;
+  }
+}
+
+.arrow__icon {
+  position: absolute;
+  right: 0;
+  top: 124px;
+  cursor: pointer;
+  z-index: 0;
+}
+@media (max-width: 400px) {
+  .arrow__icon {
+    display: none;
+  }
+}
+
+.arrow__icon._active {
+  display: none;
+}
+
+.arrow__body {
+  display: none;
+  position: absolute;
+  top: 142px;
+  right: 0px;
+}
+
+.arrow__body._active {
+  display: block;
+  right: 0;
+}
+
+.title {
+  color: #CDAA35;
+  text-align: center;
+  font-family: "ctonia Hand PERSONAL USE";
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.7px;
+  height: 100vh;
+  padding: 30px 30px 0px 30px;
+}
+@media (max-width: 800px) {
+  .title {
+    font-size: 45px;
+  }
+}
