@@ -408,13 +408,14 @@ body._lock {
 
 .brunch__image-left-second-row {
   padding-left: 60px;
+  padding-right: 0px;
 }
 @media (max-width: 900px) {
   .brunch__image-left-second-row {
-    padding-left: calc(0px + 60 * (100vw - 400px) / 500);
+    padding-left: calc(5px + 55 * (100vw - 550px) / 350);
   }
 }
-@media (max-width: 538px) {
+@media (max-width: 549px) {
   .brunch__image-left-second-row {
     width: 100%;
     padding: 0px 5px 0px 5px;
@@ -461,7 +462,7 @@ body._lock {
     padding-right: calc(45.47px + 18.38 * (100vw - 400px) / 500);
   }
 }
-@media (max-width: 538px) {
+@media (max-width: 549px) {
   .brunch__seemore {
     width: auto;
   }

@@ -288,10 +288,11 @@ body._lock {
 
 .brunch__image-left-second-row {
     padding-left: 60px;
+    padding-right: 0px;
     @media (max-width: 900px) {
-        padding-left: calc(0px + (60 - 0) * ((100vw - 400px) / (900 - 400)));
+        padding-left: calc(5px + (60 - 5) * ((100vw - 550px) / (900 - 550)));
     }
-    @media (max-width: 538px) {
+    @media (max-width: 549px) {
         width: 100%;
         padding: 0px 5px 0px 5px;
     }
@@ -326,7 +327,7 @@ body._lock {
         padding-left: calc(66.22px + (93 - 66.22) * ((100vw - 400px) / (900 - 400)));
         padding-right: calc(45.47px + (63.85 - 45.47) * ((100vw - 400px) / (900 - 400)));
     }
-    @media (max-width: 538px) {
+    @media (max-width: 549px) {
         width: auto;
     }
     @media (max-width: 400px) {
