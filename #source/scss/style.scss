@@ -37,10 +37,7 @@ body._lock {
     filter: blur(3px);
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
+
 
 .wrapper {
     display: flex;
@@ -117,7 +114,7 @@ img{
 //Header end
 
 //Меню бургер start
-@media (max-width: 893px) {
+@media (max-width: 1000px) {
     .header__logo {
         z-index: 5;
     }
@@ -215,7 +212,7 @@ img{
     
     padding-top: 180px;
     padding-left: 0px;
-    @media (max-width: 1401px) {
+    @media (max-width: 900px) {
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -238,6 +235,14 @@ img{
 .brunch__subtitle {
     text-align: center;
     font-family: 'Montserrat';
+    @media (max-width: 1000px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media (max-width: 900px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
     & p:first-child {
         padding-bottom: 10px;
     }
@@ -248,12 +253,13 @@ img{
 }
 .brunch__image {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     gap: 25px;
+    overflow: hidden;
     padding: 0px 0px 0px 60px;
     margin-top: 80px;
     margin-bottom: 80px;
-    @media (max-width: 1401px) {
+    @media (max-width: 900px) {
         align-items: center;
         flex-direction: column;
         padding: 0px 0px 0px 0px;
@@ -266,15 +272,22 @@ img{
         margin-bottom: 70px;
     }
 }
+
+.brunch__image-full {
+    @media (max-width: 900px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .brunch__image-left {
     display: flex;
     flex-direction: column;
     gap: 35px;
-    @media (max-width: 1401px) {
-        align-items: center;
-    }
 }
-
+.brunch__image-left-first-row {
+    
+}
 .brunch__image-left-second-row {
     padding-left: 60px;
     @media (max-width: 1401px) {
@@ -338,19 +351,16 @@ img{
 .brunch__image-right-first-row {
     display: flex;
     gap: 25px;
-    overflow: hidden;
-    @media (max-width: 800px) {
-        flex-wrap: wrap;
-        justify-content: center;
-        
+    @media (max-width: 900px) {
+        flex-wrap: wrap;  
     }
+
 }
 .brunch__image-right-second-row {
     display: flex;
     gap: 25px;
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         flex-wrap: wrap;
-        justify-content: center;
     }
 }
 
@@ -359,7 +369,7 @@ img{
     height: 1px;
     background-color: #CDAA35;
     margin: 0px 100px 90px 100px;
-    @media (max-width: 1401px) {
+    @media (max-width: 900px) {
         margin: 0px 70px 90px 70px;
     }
 }
@@ -371,10 +381,23 @@ img{
 .arrow__icon {
     position: absolute;
     right: 0;
-    top: 124px;
+    top: 142px;
     cursor: pointer;
     z-index: 0;
-    @media (max-width: 400px) {
+    @media (max-width: 5000px) {
+        .arrow__icon-2 {
+            display: none;
+        }
+    }
+    @media (max-width: 1000px) {
+        .arrow__icon-1 {
+            display: none;
+        }
+        .arrow__icon-2 {
+            display: block;
+        }
+    }
+    @media (max-width: 500px) {
         display: none;
     }
 }
