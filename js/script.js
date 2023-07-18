@@ -53,7 +53,7 @@ if(menuLinks.length > 0) {
 //Выезжающая плашка
 const iconArrow = document.querySelector('.arrow__icon');
 const menuArrow = document.querySelector('.arrow__body');
-const brunchLock = document.querySelector('.brunch');
+const brunchLock = document.querySelector('.main');
 if (iconArrow) {
     iconArrow.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
