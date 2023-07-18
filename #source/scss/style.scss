@@ -260,7 +260,6 @@ body._lock {
     margin-top: 80px;
     margin-bottom: 80px;
     @media (max-width: 900px) {
-        align-items: center;
         flex-direction: column;
         padding: 0px 0px 0px 0px;
     }
@@ -280,6 +279,10 @@ body._lock {
     }
 }
 
+.brunch__image-left-first-row {
+    
+}
+
 .brunch__image-left {
     display: flex;
     flex-direction: column;
@@ -287,6 +290,7 @@ body._lock {
 }
 
 .brunch__image-left-second-row {
+    
     padding-left: 60px;
     @media (max-width: 900px) {
         padding-left: calc(0px + (60 - 0) * ((100vw - 400px) / (900 - 400)));
