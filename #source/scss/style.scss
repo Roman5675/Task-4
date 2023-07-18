@@ -37,14 +37,10 @@ body._lock {
     filter: blur(3px);
 }
 
-
-
 .wrapper {
     display: flex;
     flex-direction: column;
 }
-@media (max-width: 0px) {}
-
 //Header start 
 .header {
     position: absolute;
@@ -59,6 +55,10 @@ body._lock {
     @media (max-width: 800px) {
         padding-left: calc(30px + (60 - 30) * ((100vw - 400px) / (800 - 400)));
         padding-right: calc(30px + (60 - 30) * ((100vw - 400px) / (800 - 400)));
+    }
+    @media (max-width: 399px) {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
@@ -219,6 +219,9 @@ body._lock {
     @media (max-width: 900px) {
         padding-top: calc(150px + (180 - 150) * ((100vw - 400px) / (900 - 400)));
     }
+    @media (max-width: 399px) {
+        padding-top: 150px;
+    }
 }
 .brunch__title {
     color: #CDAA35;
@@ -230,6 +233,9 @@ body._lock {
     line-height: 1;
     @media (max-width: 900px) {
         margin-bottom: calc(40px + (79 - 40) * ((100vw - 400px) / (900 - 400)));
+    }
+    @media (max-width: 399px) {
+        margin-bottom: 40px;
     }
 }
 .brunch__subtitle {
@@ -268,8 +274,9 @@ body._lock {
         margin-top: calc(40px + (80 - 40) * ((100vw - 400px) / (900 - 400)));
         margin-bottom: calc(40px + (80 - 40) * ((100vw - 400px) / (900 - 400)));
     }
-    @media (max-width: 400px) {
-        margin-bottom: 70px;
+    @media (max-width: 399px) {
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
 }
 
@@ -284,6 +291,9 @@ body._lock {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    @media (max-width: 900px) {
+        gap: 60px;
+    }
 }
 
 .brunch__image-left-second-row {
