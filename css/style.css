@@ -440,7 +440,8 @@ body._lock {
 @media (max-width: 549px) {
   .brunch__image-left-second-row {
     width: 100%;
-    padding: 0px 5px 0px 5px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
